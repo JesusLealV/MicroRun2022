@@ -27,7 +27,7 @@ public class PlayerControl : MonoBehaviour
             
         } 
 
-       // if (Input.GetKeyUp(KeyCode.W))
+       if (Input.GetKeyUp(KeyCode.W))
         {
             velocidad_actual -= velocidad_imp;
           if  (velocidad_actual < 0)
@@ -41,7 +41,7 @@ public class PlayerControl : MonoBehaviour
          {
             rot_actual = -vel_rot;
          }
-       // else if (Input.GetKeyUp(KeyCode.A))
+        else if (Input.GetKeyUp(KeyCode.A))
         {
             rot_actual = 0.0f;
         }
@@ -52,12 +52,12 @@ public class PlayerControl : MonoBehaviour
          }
 
          
-      //  else if (Input.GetKeyUp(KeyCode.D))
+        else if (Input.GetKeyUp(KeyCode.D))
         {
             rot_actual = 0.0f;
         }
-    //GetComponent<Rigidbody> (). AddForce ( transform.forward * velocidad_actual, ForceMode.Impulse);
-    //GetComponent <Rigidbody> (). AddTorque (0,rot_actual, 0,ForceMode.Impulse);
+    GetComponent<Rigidbody> (). AddForce ( transform.forward * velocidad_actual, ForceMode.Impulse);
+    GetComponent <Rigidbody> (). AddTorque (0,rot_actual, 0,ForceMode.Impulse);
     
 
 }
